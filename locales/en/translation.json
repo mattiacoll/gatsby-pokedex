@@ -1,0 +1,16 @@
+{
+  "search": {
+    "title": "Search for a Pokémon by name",
+    "label": "Name"
+  },
+  "404": {
+    "title": "Page not found",
+    "body": "Sorry, we couldn’t find what you were looking for.",
+    "home": "Go home"
+  },
+  "pokemon": {
+    "home": "Home",
+    "desc": "Description",
+    "genus": "Genus"
+  }
+}
