@@ -1,6 +1,6 @@
 // @ts-check
 import React from 'react';
-import Pokemon from './Pokemon/Pokemon';
+import Pokemon from '../Pokemon/Pokemon';
 import { List, AutoSizer } from 'react-virtualized';
 import { pokeList, pokeRow } from './PokemonList.module.css';
 
@@ -25,7 +25,7 @@ const PokemonList = ({ list, filter }) => {
               </div>
             )}
             rowCount={ Math.ceil( items.length / 2 ) }
-            overscanRowCount={3}
+            overscanRowCount={ 3 }
           />
         )}
       </AutoSizer>

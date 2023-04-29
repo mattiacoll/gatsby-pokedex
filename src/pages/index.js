@@ -1,7 +1,7 @@
 // @ts-check
 import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
-import PokemonList from '../components/PokemonList';
+import PokemonList from '../components/PokemonList/PokemonList';
 import Layout, { LayoutHead } from '../components/Layout';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { homeH1, homeSearch, homeTop } from './index.module.css';
