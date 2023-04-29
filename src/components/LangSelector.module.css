@@ -1,0 +1,15 @@
+.langSelect {
+  display: flex;
+  gap: .7rem;
+}
+
+.langEl {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--c_pri);
+}
+
+.langCurr {
+  font-weight: 700;
+  pointer-events: none;
+}
