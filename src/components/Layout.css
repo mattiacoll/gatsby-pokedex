@@ -1,0 +1,80 @@
+:root {
+  --c_bg: #F5FBFB;
+
+  --c_pri: #2E3057;
+  --c_sec: #6f7180;
+
+  --ff_main: 'Noto sans', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-color: #d5e4e9;
+  font-family: var(--ff_main);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  color: var(--c_pri);
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 23.45rem;
+  padding: 1rem var(--pad) var(--pad);
+  box-sizing: border-box;
+  background-color: var(--c_bg);
+
+  --pad: 1.9rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+main {
+  width: 100%;
+  max-width: 30rem;
+}
+
+form {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+}
+
+input {
+  font-family: var(--ff_main);
+  appearance: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0.7rem;
+  box-sizing: border-box;
+  background: #DAE7EC;
+  color: var(--c_sec);
+  width: 100%;
+  position: relative;
+}
+
+:focus-visible {
+  outline-offset: 5px;
+}
+
+input::placeholder {
+  opacity: .5;
+  color: var(--c_sec);
+}
