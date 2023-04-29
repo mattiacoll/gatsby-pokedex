@@ -44,8 +44,8 @@ const PokemonPage = ({ data }) => {
         </Link>
 
         <div className={ pokeTit }>
-          <h1 className={ pokeH1 }>{ name }</h1>
-          <h2 className={ pokeH2 }>{ number.toString().padStart( 3, '0' ) }</h2>
+          <h1 data-testid="pkmn-name" className={ pokeH1 }>{ name }</h1>
+          <h2 data-testid="pkmn-num" className={ pokeH2 }>{ number.toString().padStart( 3, '0' ) }</h2>
         </div>
       </div>
 
@@ -60,17 +60,18 @@ const PokemonPage = ({ data }) => {
           height="96"
           loading="eager"
           fetchpriority="high"
+          data-testid="pkmn-img"
         />
       </div>
 
       <div>
         <p className={ pokeP }>
           <strong><Trans>pokemon.desc</Trans></strong><br/>
-          <em>{ description }</em>
+          <em data-testid="pkmn-desc">{ description }</em>
         </p>
         <p className={ pokeP }>
           <strong><Trans>pokemon.genus</Trans></strong><br/>
-          { genus }
+          <span data-testid="pkmn-genus">{ genus }</span>
         </p>
       </div>
 
