@@ -27,7 +27,7 @@ test.describe( 'List page', () => {
 
     test( 'Has a filter to search a pokemon', async ({ page }) => {
 
-      const input = page.locator( 'input[type="search]' );
+      const input = page.locator( '#search' );
       expect( input ).not.toBeNull();
 
     });
@@ -51,7 +51,7 @@ test.describe( 'List page', () => {
 
       const navEls = page.locator( 'nav > a' );
 
-      await navEls.first().click();
+      await navEls.nth( 2 ).click();
 
       page.on( 'response', ( response ) => {
         expect( response.status() ).not.toBe( 404 );
@@ -61,9 +61,10 @@ test.describe( 'List page', () => {
 
     test( 'Filter Pokemon', async ({ page }) => {
 
-      const input = page.locator( 'input[type="search]' );
+      const input = page.locator( '#search' );
 
-      input.fill( 'bulbasaur' );
+      expect( input ).not.toBeNull();
+      await input.type( 'bulbasaur' );
 
       const pokemons = page.getByTestId( 'pokemon' ),
         numPokemons  = await pokemons.count();
