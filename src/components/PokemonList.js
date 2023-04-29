@@ -1,6 +1,6 @@
 // @ts-check
 import React from 'react';
-import Pokemon from './Pokemon';
+import Pokemon from './Pokemon/Pokemon';
 import { List, AutoSizer } from 'react-virtualized';
 import { pokeList, pokeRow } from './PokemonList.module.css';
 
@@ -20,8 +20,8 @@ const PokemonList = ({ list, filter }) => {
             rowHeight={ 176 }
             rowRenderer={({ index, key, style }) => (
               <div className={ pokeRow } key={ key } style={ style }>
-                { items[( index * 2 )] !== undefined && <Pokemon info={ items[( index * 2 )] } /> }
-                { items[( index * 2 ) + 1] !== undefined && <Pokemon info={ items[( index * 2 ) + 1] } /> }
+                <Pokemon info={ items[( index * 2 )] } />
+                <Pokemon info={ items[( index * 2 ) + 1] } />
               </div>
             )}
             rowCount={ Math.ceil( items.length / 2 ) }
