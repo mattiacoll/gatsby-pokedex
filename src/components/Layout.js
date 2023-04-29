@@ -1,6 +1,6 @@
 // @ts-check
 import React from 'react';
-import LangSelector from './LangSelector';
+import LangSelector from './LangSelector/LangSelector';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 import './Layout.css';
 
