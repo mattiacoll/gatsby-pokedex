@@ -14,9 +14,14 @@ const Pokemon = ({ info }) => {
   } = info;
 
   return (
-    <Link className={ pokeEl } to={`/pokemon/${ number }`} style={{
-      backgroundColor: colors[color],
-    }}>
+    <Link 
+      className={ pokeEl } 
+      to={`/pokemon/${ number }`} 
+      style={{
+        backgroundColor: colors[color],
+      }}
+      data-testid="pokemon"
+    >
       <div className={ pokeImgWrap }>
         <img
           className={ pokeImg }
