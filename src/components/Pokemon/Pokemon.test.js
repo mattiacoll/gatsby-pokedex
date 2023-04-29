@@ -28,7 +28,7 @@ describe( 'Render Pokemon', () => {
     const { queryByTestId } = render( <Pokemon /> );
 
     // Assertion
-    expect( queryByTestId( 'pnkm-wrap' ) ).toBeNull();
+    expect( queryByTestId( 'pkmn-wrap' ) ).toBeNull();
 
   });
 

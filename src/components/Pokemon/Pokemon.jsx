@@ -23,7 +23,7 @@ const Pokemon = ({ info }) => {
       style={{
         backgroundColor: colors[color],
       }}
-      data-testid="pnkm-wrap"
+      data-testid="pkmn-wrap"
     >
       <div className={ pokeImgWrap }>
         <img
