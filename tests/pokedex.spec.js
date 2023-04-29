@@ -35,7 +35,7 @@ test.describe( 'List page', () => {
 
     test( 'Has a list with the Pokemon name and a thumbnail image', async ({ page }) => {
 
-      const pokemons = page.getByTestId( 'pokemon' ),
+      const pokemons = page.getByTestId( 'pkmn-wrap' ),
         numPokemons  = await pokemons.count();
 
       expect( numPokemons ).toBeGreaterThanOrEqual( 1 );
@@ -67,14 +67,14 @@ test.describe( 'List page', () => {
       expect( input ).not.toBeNull();
       await input.type( 'bulbasaur' );
 
-      const pokemons = page.getByTestId( 'pokemon' );
+      const pokemons = page.getByTestId( 'pkmn-wrap' );
       await expect( pokemons ).toHaveCount( 1 );
 
     });
 
     test( 'Navigate to a pokemon page', async ({ page }) => {
 
-      const pokemons = page.getByTestId( 'pokemon' );
+      const pokemons = page.getByTestId( 'pkmn-wrap' );
 
       await pokemons.first().click();
 
