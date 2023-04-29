@@ -14,7 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test:e2e": "playwright test",
-    "test:unit": "jest --testPathPattern=./src"
+    "test:unit": "jest --testPathPattern=./src",
+    "test": "npm run test:unit && npm run test:e2e"
   },
   "dependencies": {
     "gatsby": "^5.9.0",

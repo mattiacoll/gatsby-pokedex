@@ -70,8 +70,8 @@ module.exports = defineConfig({
   ],
 
   webServer: {
-    command: 'npm run develop',
-    url: 'http://127.0.0.1:8000',
+    command: 'npm run serve',
+    url: 'http://127.0.0.1:9000',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000,
   },
