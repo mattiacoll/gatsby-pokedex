@@ -1,5 +1,5 @@
 // @ts-check
-const siteUrl = 'http://localhost:8000/', // TODO: change with .env
+const siteUrl = process.env.SITE_URL ?? 'http://localhost:8000/', // TODO: change with .env
   languages   = ['en', 'it', 'fr']; // Current supported languages are found in /locales
 
 /**
