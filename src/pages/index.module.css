@@ -1,0 +1,14 @@
+.homeH1 {
+  margin-bottom: .6rem;
+}
+
+.homeSearch {
+  color: var(--c_sec);
+  margin-bottom: 1rem;
+  font-size: .85rem;
+  font-weight: 400;
+}
+
+.homeTop {
+  margin-bottom: 1rem;
+}
