@@ -1,0 +1,33 @@
+.pokeEl {
+  display: flex;
+  background-color: #D5E4E9;
+  border-radius: 2rem;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.pokeImgWrap {
+  width: 100%;
+  max-width: 6rem;
+}
+
+.pokeImg {
+  width: 100%;
+  display: block;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.pokeH2 {
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0.3rem;
+}
+
+.pokeP {
+  font-size: .75rem;
+}

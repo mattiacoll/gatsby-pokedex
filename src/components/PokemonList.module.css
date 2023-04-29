@@ -1,0 +1,17 @@
+.pokeList {
+  width: 100%;
+  height: calc(100svh - 15.1rem);
+}
+
+@supports not ( height: 100svh ) {
+  .pokeList {
+    height: calc(100vh - 15.1rem);
+  }
+}
+
+.pokeRow {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+}
