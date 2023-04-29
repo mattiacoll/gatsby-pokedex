@@ -1,0 +1,52 @@
+.pokeTop {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.pokeBack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 2rem;
+}
+
+.pokeBack svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: var(--c_pri);
+}
+
+.pokeTit {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.pokeImgW {
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pokeImg {
+  width: 100%;
+  display: block;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.pokeH1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.1rem;
+}
+
+.pokeH2 {
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+.pokeP {
+  font-size: .85rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
