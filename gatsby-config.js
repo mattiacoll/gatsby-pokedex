@@ -13,6 +13,23 @@ module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/locales`,
+        name: 'locale',
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-i18next',
+      options: {
+        fallbackLanguage: 'en',
+        defaultLanguage:  languages[0],
+        languages,
+        redirect:         false,
+        siteUrl,
+      }
+    },
+    {
       resolve: 'pokemon-api',
       options: {
         languages,
