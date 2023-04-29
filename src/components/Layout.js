@@ -1,14 +1,25 @@
 // @ts-check
 import React from 'react';
 import LangSelector from './LangSelector';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 import './Layout.css';
 
 const Layout = ({ children }) => {
 
+  const {
+    language,
+    languages,
+    originalPath,
+  } = useI18next();
+
   return (
     <div id="wrapper">
       <header>
-        <LangSelector />
+        <LangSelector 
+          language={ language }
+          languages={ languages }
+          originalPath={ originalPath }
+        />
       </header>
       <main>
         { children }
