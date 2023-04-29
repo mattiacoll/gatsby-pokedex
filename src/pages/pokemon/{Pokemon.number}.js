@@ -1,7 +1,7 @@
 // @ts-check
 import { graphql } from 'gatsby';
 import React from 'react';
-import { Link, Trans } from 'gatsby-plugin-react-i18next';
+import { Link } from 'gatsby-plugin-react-i18next';
 import Layout, { LayoutHead } from '../../components/Layout';
 import {
   pokeTop,
@@ -66,11 +66,11 @@ const PokemonPage = ({ data }) => {
 
       <div>
         <p className={ pokeP }>
-          <strong><Trans>pokemon.desc</Trans></strong><br/>
+          <strong>{ t( 'pokemon.desc' ) }</strong><br/>
           <em data-testid="pkmn-desc">{ description }</em>
         </p>
         <p className={ pokeP }>
-          <strong><Trans>pokemon.genus</Trans></strong><br/>
+          <strong>{ t( 'pokemon.genus' ) }</strong><br/>
           <span data-testid="pkmn-genus">{ genus }</span>
         </p>
       </div>
