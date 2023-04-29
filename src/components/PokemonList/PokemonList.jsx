@@ -4,7 +4,7 @@ import Pokemon from '../Pokemon/Pokemon';
 import { List, AutoSizer } from 'react-virtualized';
 import { pokeList, pokeRow } from './PokemonList.module.css';
 
-const PokemonList = ({ list, filter }) => {
+const PokemonList = ({ list, filter = '' }) => {
 
   const items = list.filter( ( pokemon ) => {
     return pokemon.name.toLowerCase().includes( filter.toLowerCase() );

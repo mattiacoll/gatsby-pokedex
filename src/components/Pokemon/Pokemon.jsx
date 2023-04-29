@@ -19,7 +19,7 @@ const Pokemon = ({ info }) => {
   return (
     <Link 
       className={ pokeEl }
-      to={`/pokemon/${ number }`}
+      to={ `/pokemon/${ number }` }
       style={{
         backgroundColor: colors[color],
       }}
