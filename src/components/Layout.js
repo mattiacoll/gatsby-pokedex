@@ -4,7 +4,7 @@ import LangSelector from './LangSelector/LangSelector';
 import { useI18next } from 'gatsby-plugin-react-i18next';
 import './Layout.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, nolang = false }) => {
 
   const {
     language,
@@ -14,12 +14,14 @@ const Layout = ({ children }) => {
 
   return (
     <div id="wrapper">
-      <header>
-        <LangSelector 
-          language={ language }
-          languages={ languages }
-          originalPath={ originalPath }
-        />
+      <header>{
+        nolang ? '' :
+          <LangSelector 
+            language={ language }
+            languages={ languages }
+            originalPath={ originalPath }
+          />
+      }
       </header>
       <main>
         { children }

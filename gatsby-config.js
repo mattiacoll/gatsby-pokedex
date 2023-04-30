@@ -22,6 +22,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
+        pages: [{
+          matchPath: '/:lang?/404',
+          languages: ['en'],
+        }],
         fallbackLanguage: 'en',
         defaultLanguage:  languages[0],
         languages,

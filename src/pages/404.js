@@ -10,7 +10,7 @@ const NotFoundPage = () => {
   const { t } = useTranslation();
 
   return (
-    <Layout>
+    <Layout nolang={ true }>
 
       <div className={ homeTop }>
 
@@ -34,11 +34,9 @@ const NotFoundPage = () => {
 
 export const Head = () => {
 
-  const { t } = useTranslation();
-
   return (
     <>
-      <title>{ t( '404.title' ) }</title>
+      <title>404</title>
       <LayoutHead/>
     </>
   )
