@@ -11,7 +11,6 @@ module.exports = {
     siteUrl,
   },
   plugins: [
-    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
