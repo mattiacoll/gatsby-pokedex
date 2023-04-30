@@ -21,8 +21,10 @@ jobs:
       run: npm run build
     - name: Run unit tests
       run: npm run test:unit
+    - name: Run setup e2e test
+      run: npm run serve
     - name: Run e2e tests
-      run: npm run test:e2e
+      run: npx playwright test
     - uses: actions/upload-artifact@v3
       if: always()
       with:
