@@ -76,8 +76,8 @@ const PokemonPage = ({ data }) => {
       </div>
 
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query ($number: Int, $language: String!) {
@@ -105,10 +105,12 @@ export const query = graphql`
 export default PokemonPage;
 
 export const Head = ({ data }) => {
+
   return (
     <>
       <title>{ data.pokemon.name } / { data.pokemon.number }</title>
       <LayoutHead/>
     </>
-  )
-}
+  );
+
+};

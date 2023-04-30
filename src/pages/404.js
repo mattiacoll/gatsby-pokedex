@@ -29,8 +29,8 @@ const NotFoundPage = () => {
       </div>
 
     </Layout>
-  )
-}
+  );
+};
 
 export const Head = () => {
 
@@ -39,8 +39,9 @@ export const Head = () => {
       <title>404</title>
       <LayoutHead/>
     </>
-  )
-}
+  );
+
+};
 
 export const query = graphql`
   query {

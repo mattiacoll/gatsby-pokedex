@@ -47,6 +47,7 @@ const IndexPage = ({ data }) => {
     <Layout>
 
       <div className={ homeTop }>
+
         <h1 className={ homeH1 }>Pokédex</h1>
 
         <p className={ homeSearch }>
@@ -66,6 +67,7 @@ const IndexPage = ({ data }) => {
             onInput={ searchInpt }
           />
         </form>
+
       </div>
 
       <PokemonList
@@ -74,8 +76,8 @@ const IndexPage = ({ data }) => {
       />
 
     </Layout>
-  )
-}
+  );
+};
 
 
 export const query = graphql`
@@ -98,7 +100,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 export const Head = () => {
   return (
@@ -106,7 +108,7 @@ export const Head = () => {
       <title>Pokédex</title>
       <LayoutHead/>
     </>
-  )
-}
+  );
+};
 
 export default IndexPage;
