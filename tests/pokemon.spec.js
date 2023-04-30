@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test');
 test.describe( 'Pokemon page', () => {
 
   test.beforeEach( async ({ page }) => {
-    await page.goto( 'http://localhost:9000/pokemon/1/' );
+    await page.goto( './pokemon/1/' );
     await page.waitForLoadState();
   });
 
