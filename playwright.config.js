@@ -2,12 +2,6 @@
 const { defineConfig, devices } = require('@playwright/test');
 
 /**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
-
-/**
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
@@ -21,11 +15,10 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: process.env.CI ? 'dot' : 'list',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
     baseURL: 'http://127.0.0.1:9000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
@@ -71,8 +64,8 @@ module.exports = defineConfig({
   ],
 
   webServer: {
-    command: 'npx http-server ./public -p 9000',
-    url: 'http://127.0.0.1:9000',
+    command: 'npx http-server ./public -p 9000', // `npm run serve` takes too long and doesn't work on CI
+    url:     'http://127.0.0.1:9000',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000,
   },

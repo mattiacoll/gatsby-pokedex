@@ -87,9 +87,11 @@ test.describe( 'List page', () => {
 
   });
 
-  test( 'should not have any automatically detectable accessibility issues', async ({ page }) => {
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze(); // 4
-    expect(accessibilityScanResults.violations).toEqual([]); // 5
+  test( 'Should not have any automatically detectable accessibility issues', async ({ page }) => {
+
+    const a11yResult = await new AxeBuilder({ page }).analyze();
+    expect( a11yResult.violations ).toEqual([]);
+
   });
 
 });

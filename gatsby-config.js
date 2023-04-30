@@ -1,5 +1,5 @@
 // @ts-check
-const siteUrl = process.env.SITE_URL ?? 'http://localhost:8000/', // TODO: change with .env
+const siteUrl = process.env.SITE_URL ?? 'http://localhost:8000/',
   languages   = ['en', 'it', 'fr']; // Current supported languages are found in /locales
 
 /**
@@ -14,23 +14,23 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/locales`,
         name: 'locale',
-      }
+        path: `${__dirname}/locales`,
+      },
     },
     {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
-        pages: [{
-          matchPath: '/:lang?/404',
-          languages: ['en'],
-        }],
-        fallbackLanguage: 'en',
         defaultLanguage:  languages[0],
+        fallbackLanguage: 'en',
         languages,
-        redirect:         false,
+        pages: [{
+          languages: ['en'],
+          matchPath: '/:lang?/404',
+        }],
+        redirect: false,
         siteUrl,
-      }
+      },
     },
     {
       resolve: 'pokemon-api',
@@ -39,5 +39,5 @@ module.exports = {
         pokemons: 151,
       },
     },
-  ]
+  ],
 };
