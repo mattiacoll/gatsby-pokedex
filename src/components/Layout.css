@@ -65,7 +65,7 @@ input {
   border-radius: 0.7rem;
   box-sizing: border-box;
   background: #DAE7EC;
-  color: var(--c_sec);
+  color: #636572;
   width: 100%;
   position: relative;
 }
@@ -76,5 +76,5 @@ input {
 
 input::placeholder {
   opacity: .5;
-  color: var(--c_sec);
+  color: #636572;
 }

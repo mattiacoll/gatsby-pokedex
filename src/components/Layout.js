@@ -35,8 +35,13 @@ const Layout = ({ children, nolang = false }) => {
 export default Layout;
 
 export const LayoutHead = () => {
+  const {
+    language,
+  } = useI18next();
+
   return (
     <>
+      <html lang={ language } />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet" />

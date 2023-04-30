@@ -22,9 +22,13 @@ const PokemonList = ({ list, filter = '' }) => {
             height={ height }
             rowHeight={ 176 }
             rowRenderer={({ index, key, style }) => (
-              <div className={ pokeRow } key={ key } style={ style }>
-                <Pokemon info={ items[( index * 2 )] } />
-                <Pokemon info={ items[( index * 2 ) + 1] } />
+              <div className={ pokeRow } key={ key } style={ style } role="row">
+                <div role="gridcell">
+                  <Pokemon info={ items[( index * 2 )] } />
+                </div>
+                <div role="gridcell">
+                  <Pokemon info={ items[( index * 2 ) + 1] } />
+                </div>
               </div>
             )}
             rowCount={ Math.ceil( items.length / 2 ) }

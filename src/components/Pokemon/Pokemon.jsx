@@ -4,7 +4,7 @@ import { Link } from 'gatsby-plugin-react-i18next';
 import { pokeEl, pokeImgWrap, pokeImg, pokeH2, pokeP } from './Pokemon.module.css';
 import { colors } from '../colors';
 
-const Pokemon = ({ info }) => {
+const Pokemon = ({ info, role }) => {
 
   if ( !info )
     return;
