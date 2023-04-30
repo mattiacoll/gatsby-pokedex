@@ -1,49 +1,106 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# Dependency used
 
-## 🚀 Quick start
+## Translation:
 
-1.  **Create a Gatsby site.**
+- [gatsby-plugin-react-i18next](https://github.com/microapps/gatsby-plugin-react-i18next) - General translation
+- [gatsby-source-filesystem](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem) - used by gatsby-plugin-react-i18next to source translation files in `./locales`
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Scroll virtualization
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
+- [react-virtualized](https://github.com/bvaughn/react-virtualized)
+
+## Testing
+
+### Unit
+
+- [jest](https://github.com/jestjs/jest) + [testing-library](https://github.com/testing-library) 
+- there are a few other dependencies linked to jest since we cannot reuse the gatsby ones (babel, identity-obj-proxy)
+
+## End-to-end
+
+- [playwright](https://github.com/microsoft/playwright)
+
+---
+
+# How to run this project locally
+
+1. **Requirements**  
+
+    Make sure to have these programs installed:
+    - [node](https://nodejs.org/en) (v18 or above)
+    - npm (v5.2 or above, is usually bundled with node)
+    - [git](https://git-scm.com/downloads) (optional)  
+
+2. **Clone this repo**  
+
+    If you have git installed run 
+    ```sh
+    git clone https://github.com/mattiacoll/gatsby-pokedex.git
+    ``` 
+    or, **if you have SSH keys setup on github**
+    ```sh
+    git clone git@github.com:mattiacoll/gatsby-pokedex.git
+    ```
+    If you don't have git installed click on the green button "Code", then "Download zip".  
+    After that extract the zip in your preferd folder.
+
+3. **Navigate to the project and install the dependencies**  
+
+    ```sh
+    cd gatsby-pokedex
+    npm ci
     ```
 
-2.  **Start developing.**
+4. **Development build**  
+    If you want to create a development build run:
 
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
+    ```sh
     npm run develop
     ```
 
-3.  **Open the code and start customizing!**
+    Wait untill you see the message
 
-    Your site is now running at http://localhost:8000!
+    ```sh
+    You can now view gatsby-pokedex in the browser.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+    http://localhost:8000/
+    ```
 
-4.  **Learn more**
+    then open http://localhost:8000/ in your browser
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+5. **Production build**  
+    If you want to create a production build, which can then be deployed on your server or any other platform run:
 
-## 🚀 Quick start (Netlify)
+    ```sh
+    npm run build
+    ```
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+    Wait untill you see the message
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+    ``` 
+    info Done building in X.X sec
+    ```
+
+    You'll find your files in the `./public` folder.  
+    Keep in mind that you'll need a webserver to view your site, opening the `.html` might result in the site not working. 
+
+6. **Running tests**
+
+    You may want to run some automated tests to check the site functionality and accessibility.  
+
+    To run unit tests:
+    ```
+    npm run test:unit
+    ```
+    To run end-to-end tests:
+    ```
+    npm run test:e2e
+    ```
+    To run both unit and end-to-end tests:
+    ```
+    npm run test
+    ```
+
+# Deployment
+
+Currently this site is being built with github actions and deployed to https://truelayer.mttcls.com/ using github pages.  
