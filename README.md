@@ -49,6 +49,7 @@
     ```sh
     cd gatsby-pokedex
     npm ci
+    npx playwright install --with-deps
     ```
 
 4. **Development build**  
@@ -93,11 +94,13 @@
     npm run test:unit
     ```
     To run end-to-end tests:
-    ```
+    ```sh
+    npm run build # this step is needed only the first time or on subsequent site changes
     npm run test:e2e
     ```
     To run both unit and end-to-end tests:
-    ```
+    ```sh
+    npm run build # this step is needed only the first time or on subsequent site changes
     npm run test
     ```
 
