@@ -11,9 +11,10 @@ test.describe( 'Pokemon page', () => {
 
 
   test.describe( 'Structure', () => {
+
     test( 'Has navigation in 3 or more languages', async ({ page }) => {
 
-      const navEls = page.locator( 'nav > a' ),
+      const navEls = page.getByTestId( 'lng' ),
         navNums    = await navEls.count();
 
       expect( navNums ).toBeGreaterThanOrEqual( 3 );
@@ -50,6 +51,7 @@ test.describe( 'Pokemon page', () => {
       expect( await element.getAttribute( 'src' ) ).not.toBeNull();
 
     });
+
   });
 
 
@@ -57,7 +59,7 @@ test.describe( 'Pokemon page', () => {
 
     test( 'Navigate to a different language', async ({ page }) => {
 
-      const navEls = page.locator( 'nav > a' );
+      const navEls = page.getByTestId( 'lng' );
 
       await navEls.nth( 2 ).click();
 

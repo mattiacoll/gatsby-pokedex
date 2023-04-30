@@ -54,13 +54,18 @@ const IndexPage = ({ data }) => {
           { t( 'search.title' ) }
         </p>
 
-        <form action="/" method="GET">
+        <form 
+          action="/" 
+          method="GET"
+          data-testid="search-form"
+        >
           <label htmlFor="search">
             { t( 'search.label' ) }
           </label>
           <input
             id="search"
             type="search"
+            data-testid="search-input"
             name="s"
             placeholder={ t( 'search.label' ) }
             value={ search }

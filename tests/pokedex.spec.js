@@ -11,9 +11,10 @@ test.describe( 'List page', () => {
 
 
   test.describe( 'Structure', () => {
+
     test( 'Has navigation in 3 or more languages', async ({ page }) => {
 
-      const navEls = page.locator( 'nav > a' ),
+      const navEls = page.getByTestId( 'lng' ),
         navNums    = await navEls.count();
 
       expect( navNums ).toBeGreaterThanOrEqual( 3 );
@@ -29,7 +30,7 @@ test.describe( 'List page', () => {
 
     test( 'Has a filter to search a pokemon', async ({ page }) => {
 
-      const input = page.locator( '#search' );
+      const input = page.getByTestId( 'search-form' );
       expect( input ).not.toBeNull();
 
     });
@@ -40,10 +41,11 @@ test.describe( 'List page', () => {
         numPokemons  = await pokemons.count();
 
       expect( numPokemons ).toBeGreaterThanOrEqual( 1 );
-      expect( pokemons.first().locator( 'img' ) ).not.toBeNull();
-      expect( pokemons.first().locator( 'h2' ) ).not.toBeNull();
+      expect( pokemons.first().getByTestId( 'pkmn-img' ) ).not.toBeNull();
+      expect( pokemons.first().getByTestId( 'pkmn-tit' ) ).not.toBeNull();
 
     });
+
   });
 
 
@@ -51,7 +53,7 @@ test.describe( 'List page', () => {
 
     test( 'Navigate to a different language', async ({ page }) => {
 
-      const navEls = page.locator( 'nav > a' );
+      const navEls = page.getByTestId( 'lng' );
 
       await navEls.nth( 2 ).click();
 
@@ -63,7 +65,7 @@ test.describe( 'List page', () => {
 
     test( 'Filter Pokemon', async ({ page }) => {
 
-      const input = page.locator( '#search' );
+      const input = page.getByTestId( 'search-input' );
 
       expect( input ).not.toBeNull();
       await input.type( 'bulbasaur' );
