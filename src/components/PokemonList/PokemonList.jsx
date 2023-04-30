@@ -14,7 +14,7 @@ const PokemonList = ({ list, filter = '' }) => {
     <div className={ pokeList }>
       <AutoSizer
         defaultHeight={ 700 }
-        defaultWidth={ 314 }
+        defaultWidth={ 375 }
       >
         {({height, width}) => (
           <List

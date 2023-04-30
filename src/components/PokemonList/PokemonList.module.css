@@ -1,6 +1,7 @@
 .pokeList {
-  width: 100%;
   height: calc(100svh - 15.1rem);
+  width: calc( 100% + var(--pad) * 2 );
+  margin-left: calc( var(--pad) * -1 );
 }
 
 @supports not ( height: 100svh ) {
@@ -14,4 +15,6 @@
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
   align-items: flex-start;
+  padding: 0 var(--pad);
+  box-sizing: border-box;
 }
