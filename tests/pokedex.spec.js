@@ -1,5 +1,6 @@
 // @ts-check
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('@playwright/test'),
+  AxeBuilder = require('@axe-core/playwright').default;
 
 test.describe( 'List page', () => {
 
@@ -84,6 +85,11 @@ test.describe( 'List page', () => {
 
     });
 
+  });
+
+  test( 'should not have any automatically detectable accessibility issues', async ({ page }) => {
+    const accessibilityScanResults = await new AxeBuilder({ page }).analyze(); // 4
+    expect(accessibilityScanResults.violations).toEqual([]); // 5
   });
 
 });
